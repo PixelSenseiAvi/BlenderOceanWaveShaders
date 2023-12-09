@@ -1,0 +1,17 @@
+shader stormy_ocean_volume(
+    float Scale = 1.0,
+    float Detail = 2.0,
+    float Distortion = 1.0,
+    float DensityScale = 1.0,
+    output float Density = 0.0)
+{
+    // Adjust the scale of the noise based on the Detail parameter
+    point scaledP = P * Scale * Detail;
+
+    // Distort the coordinates
+    point distortedP = scaledP + noise("perlin", scaledP) * Distortion;
+
+    // Compute the density for the volume
+    float noiseValue = noise("perlin", distortedP);
+    Density = noiseValue * DensityScale;
+}
