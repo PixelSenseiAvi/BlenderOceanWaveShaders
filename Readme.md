@@ -17,7 +17,7 @@ Welcome to **BlenderOceanWaveShaders**! This GitHub repository is all about usin
 
 ### Installation
 1. **Clone this repository:** git clone https://github.com/PixelSenseiAvi/BlenderOceanWaveShaders.git
-2. 2. **Open Blender** and load your project.
+2. **Open Blender** and load your project.
 3. **Import the shaders** into your project. Copy it manually to the text editor in the Blender. Use Script node in Material editor and load the shader.
 4. **Customize the settings** to fit your scene.
 5. **Render** and enjoy the enhanced realism in your ocean scenes!
