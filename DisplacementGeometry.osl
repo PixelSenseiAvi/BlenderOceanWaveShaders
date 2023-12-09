@@ -1,0 +1,16 @@
+shader ocean_floor_displacement(
+    float Scale = 1.0,
+    float Detail = 2.0,
+    float Distortion = 1.0,
+    output float Displacement = 0.0)
+{
+    // Adjust the scale of the noise based on the Detail parameter
+    point scaledP = P * Scale * Detail;
+
+    // Distort the coordinates
+    point distortedP = scaledP + noise("perlin", scaledP) * Distortion;
+
+    // Compute the displacement
+    Displacement = noise("perlin", distortedP);
+}
+
